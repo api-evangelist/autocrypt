@@ -1,23 +1,82 @@
 aid: autocrypt
+
 name: Autocrypt
-description: 'Autocrypt is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://autocrypt.io/wp-content/uploads/2021/08/AUTOCRYPT-Contact-Us.png
+
+description: Autocrypt provides cyber‑physical security solutions for autonomous and connected vehicles, in‑vehicle systems, V2X communications,
+  EV charging infrastructure, robotics, and defense applications. Founded in 2007 in Seoul, South Korea, the company offers hardware security
+  modules, trusted execution environments, digital key management, intrusion detection, and compliance services to protect physical AI systems
+  across mobility and industrial sectors.
+
 url: https://raw.githubusercontent.com/api-evangelist/autocrypt/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
 - Company
-apis: []
+- Cybersecurity
+- Automotive
+- Physical AI
+- Mobility
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Security
+  url: security/autocrypt-vulnerability-disclosure.yml
+- type: Hosts
+  url: hosts/autocrypt-hosts.yml
+- type: TermsOfService
+  url: https://autocrypt.io/terms-and-conditions/
+- type: PrivacyPolicy
+  url: https://autocrypt.io/privacy-policy/
+- type: Newsroom
+  url: https://autocrypt.io/news/
+- type: Blog
+  url: https://autocrypt.io/blog/
+- type: VulnerabilityDisclosure
+  url: security/autocrypt-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/autocrypt-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://autocrypt.io/
+
+apis:
+- name: Autocrypt API
+  description: Autocrypt provides API access to its security platform (no public spec discovered)
+  humanURL: https://autocrypt.io/
+  baseURL: null
+  aid: autocrypt:autocrypt-api
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: No OpenAPI, AsyncAPI, GraphQL, gRPC, or WSDL files were found at common endpoints on autocrypt.io or api.autocrypt.io.
+  evidence:
+  - url: https://api.autocrypt.io/openapi.json
+    status: 0
+  - url: https://autocrypt.io/openapi.json
+    status: 404
+  checked: 2026-09-26
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 6
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
